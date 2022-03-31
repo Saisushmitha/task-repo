@@ -9,7 +9,7 @@ class Circle {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, true);
         ctx.closePath();
-        ctx.fillStyle = 'green';
+        ctx.fillStyle = 'yellow';
         ctx.fill();
     }
 }

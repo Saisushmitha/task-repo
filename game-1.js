@@ -3,6 +3,7 @@ let f = false
 let start;
 // TODO: finish timing code???
 const c = document.getElementById('c');
+
 c.width = 640;
 c.height = 640;
 let point = 0;
@@ -91,7 +92,7 @@ const intro = () => {
     
     g.textAlign = 'center';
     
-    g.fillText('Play Snake - press Enter to Start', 320, 320);
+    g.fillText('Play Snake - press m to Start', 320, 320);
 }
 
 const startGame = () => {
@@ -108,8 +109,8 @@ const gameOver = () => {
     g.font = '30px Arial';
     g.fillStyle = 'black';
     g.textAlign = 'center';
-    g.fillText(`Game over! You earned ${point} points.`, 320, 320);
-    g.fillText(`Press Enter to play again.`, 320, 360);
+    g.fillText(`Game over! You earned ${point} points.`, 320, 420);
+    g.fillText(`Press Enter to play again.`, 420, 260);
     setTimeout(() => { 
         if(!f) {
             intro();
@@ -125,7 +126,7 @@ const checkFoodCollision = () => {
 window.addEventListener('keydown', (e) => {
     const { key } = e;
     switch(key) {
-        case 'Enter':
+        case 'm':
             e.preventDefault();
             if(!f) {
                 f = true;
